@@ -2047,9 +2047,9 @@ textarea.w-input, textarea.w-select {
 }
 
 :root {
-  --background: #F8F5F0;
-  --_fonts---font-family--geist: Geist, sans-serif;
-  --black: #0F1F3D;
+  --background: #FFFFFF;
+  --_fonts---font-family--geist: Lato, sans-serif;
+  --black: #000000;
   --_fonts---font-size--medium-m: 18px;
   --_fonts---line-height--xl: 124%;
   --_fonts---font-weight--medium: 500;
@@ -2064,15 +2064,15 @@ textarea.w-input, textarea.w-select {
   --_fonts---line-height--l: 108%;
   --_fonts---letter-spacing--m: -.03em;
   --_sizes---xlarge-radius: 100px;
-  --accent: #D97706;
+  --accent: #E91E27;
   --_sizes---small-radius: 24px;
-  --black-opacity--5: #0F1F3D0d;
-  --black-opacity--65: #0F1F3Da6;
+  --black-opacity--5: #0000000d;
+  --black-opacity--65: #000000a6;
   --white: white;
   --_fonts---font-size--medium-s: 16px;
-  --black-opacity--10: #0F1F3D1a;
-  --black-opacity--80: #0F1F3Dcc;
-  --black-opacity--15: #0F1F3D26;
+  --black-opacity--10: #0000001a;
+  --black-opacity--80: #000000cc;
+  --black-opacity--15: #00000026;
   --_sizes---large-radius: 32px;
   --_sizes---medium-radius: 28px;
   --_fonts---font-size--medium-l: 24px;
@@ -4212,7 +4212,7 @@ ul, ol {
 
 @media screen and (max-width: 991px) {
   body {
-    --_fonts---font-family--geist: Geist, sans-serif;
+    --_fonts---font-family--geist: Lato, sans-serif;
     --_fonts---font-size--medium-m: 18px;
     --_fonts---line-height--xl: 124%;
     --_fonts---font-weight--medium: 500;
@@ -4583,7 +4583,7 @@ ul, ol {
 
 @media screen and (max-width: 767px) {
   body {
-    --_fonts---font-family--geist: Geist, sans-serif;
+    --_fonts---font-family--geist: Lato, sans-serif;
     --_fonts---font-size--medium-m: 18px;
     --_fonts---line-height--xl: 124%;
     --_fonts---font-weight--medium: 500;
@@ -5229,7 +5229,7 @@ ul, ol {
 
 @media screen and (max-width: 479px) {
   body {
-    --_fonts---font-family--geist: Geist, sans-serif;
+    --_fonts---font-family--geist: Lato, sans-serif;
     --_fonts---font-size--medium-m: 18px;
     --_fonts---line-height--xl: 124%;
     --_fonts---font-weight--medium: 500;
