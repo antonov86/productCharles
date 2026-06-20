@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>What Kind of PM Are You Built to Become? — Product Charles</title>
+<meta name="description" content="Take the free PM Readiness Scorecard. 16 questions. Instant personalized results.">
+<link rel="icon" type="image/png" href="../blueprint/assets/favicon.png">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1336332018551257');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; min-height: 100vh; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+    background: #F7F5F0;
+    color: #0A1F3D;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Layout ── */
+  .pc-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px 60px;
+  }
+
+  .pc-header {
+    width: 100%;
+    max-width: 680px;
+    padding: 24px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pc-logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0A1F3D;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+
+  .pc-step-label {
+    font-size: 13px;
+    color: rgba(10,31,61,0.45);
+    font-weight: 500;
+  }
+
+  /* ── Progress ── */
+  .pc-progress-wrap {
+    width: 100%;
+    max-width: 680px;
+    margin: 20px 0 0;
+  }
+
+  .pc-progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(10,31,61,0.1);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .pc-progress-fill {
+    height: 100%;
+    background: #FF5A1F;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+
+  /* ── Card ── */
+  .pc-card {
+    width: 100%;
+    max-width: 680px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 48px 48px 40px;
+    margin-top: 24px;
+    border: 1px solid rgba(10,31,61,0.08);
+  }
+
+  /* ── Intro screen ── */
+  .pc-intro-badge {
+    display: inline-block;
+    background: rgba(255,90,31,0.1);
+    color: #FF5A1F;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .pc-intro h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    color: #0A1F3D;
+  }
+
+  .pc-intro p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(10,31,61,0.6);
+    margin: 0 0 32px;
+  }
+
+  .pc-meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 36px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .pc-meta-list li {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    color: rgba(10,31,61,0.55);
+    font-weight: 500;
+  }
+
+  .pc-meta-list li::before {
+    content: "✓";
+    color: #FF5A1F;
+    font-weight: 700;
+  }
+
+  /* ── Question screen ── */
+  .pc-category {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #FF5A1F;
+    margin: 0 0 12px;
+  }
+
+  .pc-question {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    color: #0A1F3D;
+  }
+
+  .pc-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .pc-answer {
+    padding: 16px 20px;
+    border: 2px solid rgba(10,31,61,0.12);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #0A1F3D;
+    transition: border-color 0.15s, background 0.15s;
+    text-align: left;
+    background: #fff;
+    width: 100%;
+  }
+
+  .pc-answer:hover {
+    border-color: rgba(255,90,31,0.4);
+    background: rgba(255,90,31,0.03);
+  }
+
+  .pc-answer.selected {
+    border-color: #FF5A1F;
+    background: rgba(255,90,31,0.05);
+    color: #0A1F3D;
+    font-weight: 600;
+  }
+
+  /* ── Navigation ── */
+  .pc-nav-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pc-btn-back {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(10,31,61,0.4);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.15s;
+  }
+
+  .pc-btn-back:hover { color: rgba(10,31,61,0.7); }
+
+  .pc-btn {
+    display: inline-block;
+    background: #0A1F3D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: -0.01em;
+  }
+
+  .pc-btn:hover { background: #122d58; transform: translateY(-1px); }
+  .pc-btn:disabled { background: rgba(10,31,61,0.2); cursor: not-allowed; transform: none; }
+
+  .pc-btn.primary {
+    background: #FF5A1F;
+  }
+  .pc-btn.primary:hover { background: #e04d18; }
+  .pc-btn.primary:disabled { background: rgba(255,90,31,0.3); cursor: not-allowed; }
+
+  /* ── Email gate ── */
+  .pc-gate h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin: 0 0 10px;
+    color: #0A1F3D;
+  }
+
+  .pc-gate p {
+    font-size: 16px;
+    color: rgba(10,31,61,0.55);
+    line-height: 1.6;
+    margin: 0 0 28px;
+  }
+
+  .pc-field {
+    margin-bottom: 16px;
+  }
+
+  .pc-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(10,31,61,0.6);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .pc-field input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid rgba(10,31,61,0.12);
+    border-radius: 8px;
+    font-size: 16px;
+    color: #0A1F3D;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.15s;
+    font-family: inherit;
+  }
+
+  .pc-field input:focus { border-color: #FF5A1F; }
+
+  .pc-privacy {
+    font-size: 12px;
+    color: rgba(10,31,61,0.35);
+    margin: 12px 0 0;
+  }
+
+  /* ── Results screen ── */
+  .pc-results-score {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background: #0A1F3D;
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
+
+  .pc-score-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 3px solid #FF5A1F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .pc-score-number {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .pc-score-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .pc-score-info {
+    flex: 1;
+  }
+
+  .pc-score-tier {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #FF5A1F;
+    margin-bottom: 4px;
+  }
+
+  .pc-score-headline {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .pc-results-body {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(10,31,61,0.72);
+    margin: 0 0 28px;
+  }
+
+  .pc-results-next {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(10,31,61,0.4);
+    margin: 0 0 12px;
+  }
+
+  .pc-results-cta {
+    display: inline-block;
+    background: #FF5A1F;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: -0.01em;
+  }
+
+  .pc-results-cta:hover { background: #e04d18; transform: translateY(-1px); }
+
+  .pc-divider {
+    border: none;
+    border-top: 1px solid rgba(10,31,61,0.08);
+    margin: 32px 0;
+  }
+
+  .pc-results-secondary {
+    font-size: 14px;
+    color: rgba(10,31,61,0.5);
+    line-height: 1.6;
+  }
+
+  .pc-results-secondary a {
+    color: #FF5A1F;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* ── Screen transitions ── */
+  .pc-screen {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .pc-screen.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Footer ── */
+  .pc-footer {
+    max-width: 680px;
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 13px;
+    color: rgba(10,31,61,0.3);
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 600px) {
+    .pc-card { padding: 32px 24px 28px; }
+    .pc-intro h1 { font-size: 26px; }
+    .pc-question { font-size: 19px; }
+    .pc-meta-list { gap: 12px; }
+    .pc-results-score { flex-direction: column; text-align: center; }
+    .pc-score-info { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pc-wrap" id="app">
+  <!-- Rendered by JS -->
+</div>
+
+<script>
+// ── GHL WEBHOOK — fill in after creating the webhook in GHL ──────────
+const GHL_WEBHOOK = 'YOUR_GHL_WEBHOOK_URL_HERE';
+
+// ── Questions ────────────────────────────────────────────────────────
+const QUESTIONS = [
+  {
+    id: 'q1', category: null, scored: false,
+    text: 'What best describes where you are right now?',
+    answers: [
+      { text: "I'm in a different field (engineering, design, consulting, etc.) and want to transition into PM", persona: 'chris' },
+      { text: "I'm in an early PM-adjacent role (analyst, APM, coordinator) and want to land my first official PM title", persona: 'alex' },
+      { text: "I'm already a PM (2+ years) and want to reach Senior, Lead, or Director level", persona: 'uma' },
+      { text: "I'm a founder or entrepreneur and want to build better products", persona: 'fiona' },
+    ]
+  },
+  {
+    id: 'q2', category: 'Your Foundation', scored: true,
+    text: 'How many years of professional experience do you have?',
+    answers: [
+      { text: 'Less than 2 years', points: 3 },
+      { text: '2–5 years', points: 5 },
+      { text: '6–10 years', points: 7 },
+      { text: '10+ years', points: 6 },
+    ]
+  },
+  {
+    id: 'q3', category: 'Your Foundation', scored: true,
+    text: 'Have you ever led a project, initiative, or product — even informally?',
+    answers: [
+      { text: 'Yes, multiple times across different teams', points: 8 },
+      { text: 'Yes, once or twice', points: 5 },
+      { text: "I've contributed but not led", points: 3 },
+      { text: 'Not yet', points: 1 },
+    ]
+  },
+  {
+    id: 'q4', category: 'Your Foundation', scored: true,
+    text: 'How often do you work directly with engineers, designers, or data teams?',
+    answers: [
+      { text: "Daily — it's core to my current role", points: 6 },
+      { text: 'Weekly', points: 4 },
+      { text: 'Occasionally', points: 2 },
+      { text: 'Rarely or never', points: 1 },
+    ]
+  },
+  {
+    id: 'q5', category: 'Your Foundation', scored: true,
+    text: 'Have you ever presented a strategy, proposal, or plan to stakeholders or leadership?',
+    answers: [
+      { text: "Yes, regularly — it's part of my job", points: 6 },
+      { text: 'Yes, a few times', points: 4 },
+      { text: 'Once or twice', points: 2 },
+      { text: 'Not yet', points: 1 },
+    ]
+  },
+  {
+    id: 'q6', category: 'The 3 Core PM Skills', scored: true,
+    text: 'How comfortable are you articulating a product vision — explaining what to build and why — to someone non-technical?',
+    answers: [
+      { text: 'Very comfortable, I do it regularly', points: 8 },
+      { text: 'Somewhat comfortable', points: 5 },
+      { text: "I can do it but it's not natural", points: 3 },
+      { text: 'I struggle with this', points: 1 },
+    ]
+  },
+  {
+    id: 'q7', category: 'The 3 Core PM Skills', scored: true,
+    text: 'Have you ever written a product requirement, user story, spec, or PRD?',
+    answers: [
+      { text: "Yes — it's part of my regular work", points: 8 },
+      { text: 'Yes — as a personal or side project', points: 5 },
+      { text: "I've read them but not written one", points: 2 },
+      { text: 'Never', points: 1 },
+    ]
+  },
+  {
+    id: 'q8', category: 'The 3 Core PM Skills', scored: true,
+    text: 'How do you currently handle competing priorities when everything feels urgent?',
+    answers: [
+      { text: 'I use a clear framework (RICE, MoSCoW, ICE, etc.) and can defend my decisions', points: 8 },
+      { text: "I prioritize but it's more instinct than structured", points: 5 },
+      { text: 'I find prioritization genuinely difficult', points: 3 },
+      { text: 'I usually defer to whoever is loudest', points: 1 },
+    ]
+  },
+  {
+    id: 'q9', category: 'The 3 Core PM Skills', scored: true,
+    text: 'How would you rate your ability to align a group of people around a single direction — especially when they disagree?',
+    answers: [
+      { text: "Strong — I've done this in high-stakes situations", points: 6 },
+      { text: 'Moderate — I can do it in familiar settings', points: 4 },
+      { text: "Developing — it doesn't come naturally", points: 2 },
+      { text: 'I avoid conflict-heavy alignment conversations', points: 1 },
+    ]
+  },
+  {
+    id: 'q10', category: 'Product Thinking', scored: true,
+    text: 'When you use an app or product, do you find yourself analyzing why design or feature decisions were made?',
+    answers: [
+      { text: 'Always — I do it without thinking', points: 7 },
+      { text: 'Often', points: 5 },
+      { text: 'Sometimes', points: 3 },
+      { text: 'Rarely', points: 1 },
+    ]
+  },
+  {
+    id: 'q11', category: 'Product Thinking', scored: true,
+    text: 'Can you name and explain at least one product framework (JTBD, OKRs, RICE, North Star, etc.)?',
+    answers: [
+      { text: 'Yes — I use frameworks regularly in my work', points: 8 },
+      { text: "Yes — I know them conceptually but haven't applied them", points: 5 },
+      { text: "I've heard the names but couldn't explain them", points: 2 },
+      { text: 'Not familiar', points: 1 },
+    ]
+  },
+  {
+    id: 'q12', category: 'Product Thinking', scored: true,
+    text: 'If someone asked you right now to describe your favorite product and the problem it solves — how confident are you?',
+    answers: [
+      { text: "Very confident — I'd start with the problem, not the features", points: 6 },
+      { text: 'Fairly confident', points: 4 },
+      { text: "I'd describe the features but struggle with the problem framing", points: 2 },
+      { text: "I'm not sure how to answer that", points: 1 },
+    ]
+  },
+  {
+    id: 'q13', category: 'Product Thinking', scored: true,
+    text: 'Do you actively consume PM content — blogs, podcasts, books, newsletters?',
+    answers: [
+      { text: "Yes, regularly — it's part of how I stay sharp", points: 4 },
+      { text: 'Occasionally', points: 3 },
+      { text: 'Rarely', points: 2 },
+      { text: 'Not yet', points: 1 },
+    ]
+  },
+  {
+    id: 'q14', category: 'Your Next Move', scored: true,
+    text: 'Do you have any documented PM work — case studies, portfolio projects, side projects, or hackathon work?',
+    answers: [
+      { text: 'Yes — I have documented, shareable work', points: 6 },
+      { text: "I have some but it's not organized", points: 4 },
+      { text: "I've done PM-adjacent work but haven't documented it", points: 2 },
+      { text: 'Not yet', points: 1 },
+    ]
+  },
+  {
+    id: 'q15', category: 'Your Next Move', scored: true,
+    text: 'How clearly can you describe the specific PM role or path you\'re targeting?',
+    answers: [
+      { text: "Very clearly — I know the company type, stage, and domain", points: 6 },
+      { text: 'Somewhat clearly', points: 4 },
+      { text: 'I have a general direction', points: 2 },
+      { text: "Still figuring it out", points: 1 },
+    ]
+  },
+  {
+    id: 'q16', category: null, scored: false,
+    text: "What's the biggest thing holding you back from your next PM step right now?",
+    answers: [
+      { text: "I don't know what skills I'm missing" },
+      { text: 'I have the skills but struggle to communicate them in interviews' },
+      { text: 'I lack portfolio or real PM experience' },
+      { text: "I'm not sure which path to take (MBA, course, on-the-job)" },
+      { text: "Time — I'm working full-time and can't commit to much" },
+      { text: "I'm not sure PM is the right move for me" },
+    ]
+  },
+];
+
+const MAX_RAW_SCORE = 94; // sum of all max points across scored questions
+
+// ── Results content (4 personas × 3 tiers) ──────────────────────────
+const RESULTS = {
+  chris: {
+    persona_label: 'Career Switcher',
+    1: {
+      tier_label: 'PM Curious',
+      headline: "You've got the instinct. The path is clearer than you think.",
+      body: "You're making a smart move. Transitioning from your current field into PM is one of the highest-ROI career decisions you can make — a 20–30% salary increase on average. And your existing background is an advantage, not a liability.\n\nThe gap isn't your experience. It's knowing which skills to build, how to get PM experience without a PM title, and how to frame your story in interviews. Charles did exactly this — he became the PM for NASA's first iPhone app without a PM title, by pitching a vision and delivering results.",
+      next: 'Download the free PM Career Blueprint — a step-by-step guide to breaking into PM from a non-PM background.',
+      cta_text: 'Get the Free Blueprint',
+      cta_url: 'https://go.productcharles.com/blueprint/?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=chris-tier1',
+    },
+    2: {
+      tier_label: 'PM Ready',
+      headline: "You're closer than you think. Here's the gap to close.",
+      body: "You already think like a PM — you just haven't had the title yet. At this stage the biggest unlock is packaging: how to frame your existing work in PM language, build 1–2 portfolio case studies, and walk into interviews with structured, confident answers.\n\nCharles covers all of this in the PM Mastery Course — built from his experience shipping products at NASA, Apple, Ticketmaster, and Getaround, and interviewing at Google, Microsoft, and Yelp.",
+      next: 'Watch the free training — "The 3 Skills You Need to Become an Irreplaceable Product Manager."',
+      cta_text: 'Watch Free Training',
+      cta_url: 'https://event.webinarjam.com/rk0rn/register/m0rkouz?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=chris-tier2',
+    },
+    3: {
+      tier_label: 'PM Primed',
+      headline: "You're ready to make your move. Don't wait.",
+      body: "You have the skills, the cross-functional experience, and the self-awareness. What's between you and your first PM offer is execution: a sharp portfolio, interview answers that start with the problem (not the solution), and a LinkedIn profile that gets you found before you apply.\n\nThe PM Mastery Course covers exactly that — frameworks from NASA, Apple, Ticketmaster, and Getaround, built for people who are ready to move now.",
+      next: 'Enroll in the PM Mastery Course and land your first PM role.',
+      cta_text: 'Get the PM Mastery Course — $297',
+      cta_url: 'https://go.productcharles.com/course/?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=chris-tier3',
+    },
+  },
+  alex: {
+    persona_label: 'Aspiring PM',
+    1: {
+      tier_label: 'PM Curious',
+      headline: "You're building the right foundation. Here's what to prioritize.",
+      body: "You're early in the journey — and that's fine. The PMs who advance fastest aren't the ones who knew the most on day one. They're the ones who built skills deliberately: vision first, then execution, then leadership.\n\nCharles mapped this exact progression into a framework called Student → Apprentice → Mentor → Journeyman. The PM Career Blueprint walks you through it.",
+      next: 'Download the free PM Career Blueprint.',
+      cta_text: 'Get the Free Blueprint',
+      cta_url: 'https://go.productcharles.com/blueprint/?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=alex-tier1',
+    },
+    2: {
+      tier_label: 'PM Ready',
+      headline: "You have the foundation. Now build the credibility.",
+      body: "You're doing the work — you just need to make it visible. At your stage, the difference between staying junior and getting promoted comes down to structured frameworks, stakeholder communication, and the ability to own a product end-to-end.\n\nThe PM Mastery Course fills exactly those gaps — with frameworks Charles developed at NASA, Apple, and Ticketmaster.",
+      next: 'Watch the free training.',
+      cta_text: 'Watch Free Training',
+      cta_url: 'https://event.webinarjam.com/rk0rn/register/m0rkouz?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=alex-tier2',
+    },
+    3: {
+      tier_label: 'PM Primed',
+      headline: "You're ready for the next level. Here's how to get there faster.",
+      body: "You've put in the reps. You think in frameworks, you communicate clearly, and you know what good looks like. The next step is accelerating — sharper interview performance, a stronger portfolio, and the strategic mindset that gets you promoted or hired at a top company.\n\nThe PM Mastery Course gives you the structure to make that jump faster.",
+      next: 'Enroll in the PM Mastery Course.',
+      cta_text: 'Get the PM Mastery Course — $297',
+      cta_url: 'https://go.productcharles.com/course/?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=alex-tier3',
+    },
+  },
+  uma: {
+    persona_label: 'Upskilling PM',
+    1: {
+      tier_label: 'PM Curious',
+      headline: "You're experienced. But the ceiling you're hitting is real — and fixable.",
+      body: "After a few years in PM, the skills that got you here aren't always the ones that get you to Senior or Director. The gap at this level is usually strategic thinking, influence without authority, and the ability to own a product vision top-to-bottom.\n\nStart with the free Blueprint to identify exactly where your gaps are.",
+      next: 'Download the free PM Career Blueprint.',
+      cta_text: 'Get the Free Blueprint',
+      cta_url: 'https://go.productcharles.com/blueprint/?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=uma-tier1',
+    },
+    2: {
+      tier_label: 'PM Ready',
+      headline: "You have the experience. The next level needs a different skill set.",
+      body: "Mid-level PM skills are about execution. Senior PM skills are about vision and organizational influence. The jump between them is rarely about working harder — it's about thinking differently.\n\nThe PM Mastery Course covers the frameworks and leadership skills that Charles used across NASA, Apple, Ticketmaster, and Getaround to operate at the highest level.",
+      next: 'Watch the free training.',
+      cta_text: 'Watch Free Training',
+      cta_url: 'https://event.webinarjam.com/rk0rn/register/m0rkouz?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=uma-tier2',
+    },
+    3: {
+      tier_label: 'PM Primed',
+      headline: "Senior PM is within reach. Here's the final push.",
+      body: "You're operating at a high level. What separates you from a Senior or Lead PM title at a top company is usually one of three things: how you handle ambiguity, how you influence without authority, or how you tell the story of your product impact.\n\nThe PM Mastery Course sharpens all three.",
+      next: 'Enroll in the PM Mastery Course.',
+      cta_text: 'Get the PM Mastery Course — $297',
+      cta_url: 'https://go.productcharles.com/course/?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=uma-tier3',
+    },
+  },
+  fiona: {
+    persona_label: 'Founder',
+    1: {
+      tier_label: 'PM Curious',
+      headline: "You're building something. PM thinking will make it 10x better.",
+      body: "Most founders make the same product mistakes — building features before validating problems, skipping the functional foundation for emotional polish, adding features instead of solving the core issue. Charles saw this pattern across NASA, Apple, and Ticketmaster, and built a framework to avoid it: Pyrami.\n\nStart with the free Blueprint to get the foundation right.",
+      next: 'Download the free PM Career Blueprint.',
+      cta_text: 'Get the Free Blueprint',
+      cta_url: 'https://go.productcharles.com/blueprint/?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=fiona-tier1',
+    },
+    2: {
+      tier_label: 'PM Ready',
+      headline: "You think like a PM. Now build like one.",
+      body: "You have product instinct — you can see what needs to be built. The gap is usually structure: how to prioritize ruthlessly, write requirements your team can execute, and know when to kill a feature vs. double down.\n\nThe PM Mastery Course gives you the frameworks Charles used to ship award-winning products at NASA and manage ticket purchases for millions of fans at Ticketmaster.",
+      next: 'Watch the free training.',
+      cta_text: 'Watch Free Training',
+      cta_url: 'https://event.webinarjam.com/rk0rn/register/m0rkouz?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=fiona-tier2',
+    },
+    3: {
+      tier_label: 'PM Primed',
+      headline: "You build like a PM. Here's how to scale like one.",
+      body: "You're already applying product thinking systematically. At this stage the next unlock is ecological: building the features, systems, and feedback loops that make your product grow on its own. Charles calls this the top of the Pyrami — and it's where great products separate from good ones.\n\nThe PM Mastery Course covers the full Pyrami framework and how to apply it at scale.",
+      next: 'Enroll in the PM Mastery Course.',
+      cta_text: 'Get the PM Mastery Course — $297',
+      cta_url: 'https://go.productcharles.com/course/?utm_source=scorecard&utm_medium=results&utm_campaign=pm-scorecard&utm_content=fiona-tier3',
+    },
+  },
+};
+
+// ── State ────────────────────────────────────────────────────────────
+let screen = 'intro'; // intro | quiz | gate | results
+let currentQ = 0;     // 0–15
+let answers = {};     // questionIndex -> answerIndex
+let persona = null;   // chris | alex | uma | fiona
+let blocker = null;   // Q16 answer text
+let score = 0;        // 0–100 normalized
+let tier = 0;         // 1 | 2 | 3
+
+// ── Score calculation ────────────────────────────────────────────────
+function calcScore() {
+  let raw = 0;
+  for (let i = 1; i <= 14; i++) {
+    if (answers[i] !== undefined && QUESTIONS[i].scored) {
+      raw += QUESTIONS[i].answers[answers[i]].points;
+    }
+  }
+  return Math.round(raw / MAX_RAW_SCORE * 100);
+}
+
+function getTier(s) {
+  if (s <= 40) return 1;
+  if (s <= 70) return 2;
+  return 3;
+}
+
+// ── Render helpers ───────────────────────────────────────────────────
+function el(tag, attrs, ...children) {
+  const e = document.createElement(tag);
+  if (attrs) Object.entries(attrs).forEach(([k, v]) => {
+    if (k === 'class') e.className = v;
+    else if (k === 'style') e.style.cssText = v;
+    else if (k.startsWith('on')) e[k] = v;
+    else e.setAttribute(k, v);
+  });
+  children.forEach(c => {
+    if (c === null || c === undefined) return;
+    e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+  });
+  return e;
+}
+
+function getApp() { return document.getElementById('app'); }
+
+function showScreen(html) {
+  const app = getApp();
+  app.innerHTML = '';
+
+  // Header (always visible except intro)
+  const totalScored = QUESTIONS.length; // 16
+  const showProgress = screen === 'quiz';
+
+  const header = el('div', { class: 'pc-header' },
+    el('a', { href: 'https://productcharles.com', class: 'pc-logo' }, 'Product Charles'),
+    showProgress
+      ? el('span', { class: 'pc-step-label' }, `Question ${currentQ + 1} of ${QUESTIONS.length}`)
+      : el('span', { class: 'pc-step-label' }, 'PM Readiness Scorecard')
+  );
+  app.appendChild(header);
+
+  if (showProgress) {
+    const pct = Math.round((currentQ) / QUESTIONS.length * 100);
+    const pw = el('div', { class: 'pc-progress-wrap' },
+      el('div', { class: 'pc-progress-bar' },
+        el('div', { class: 'pc-progress-fill', style: `width:${pct}%` })
+      )
+    );
+    app.appendChild(pw);
+  }
+
+  const card = el('div', { class: 'pc-card pc-screen' });
+  card.innerHTML = html;
+  app.appendChild(card);
+
+  const footer = el('div', { class: 'pc-footer' },
+    '© 2026 ProductCharles.com'
+  );
+  app.appendChild(footer);
+
+  requestAnimationFrame(() => card.classList.add('visible'));
+}
+
+// ── Screens ──────────────────────────────────────────────────────────
+function renderIntro() {
+  screen = 'intro';
+  showScreen(`
+    <div class="pc-intro">
+      <div class="pc-intro-badge">Free Assessment</div>
+      <h1>What Kind of Product Manager Are You Built to Become?</h1>
+      <p>16 questions. 3 minutes. Instant personalized results — with a clear next step based on exactly where you are.</p>
+      <ul class="pc-meta-list">
+        <li>Identifies your PM persona and readiness level</li>
+        <li>Scores you across 4 key PM skill categories</li>
+        <li>Gives you a personalized action plan</li>
+      </ul>
+      <button class="pc-btn primary" onclick="startQuiz()" style="font-size:17px;padding:16px 40px;">
+        Start the Assessment →
+      </button>
+    </div>
+  `);
+}
+
+function renderQuestion() {
+  screen = 'quiz';
+  const q = QUESTIONS[currentQ];
+  const isFirst = currentQ === 0;
+  const selectedIdx = answers[currentQ];
+
+  const answersHtml = q.answers.map((a, i) =>
+    `<button class="pc-answer${selectedIdx === i ? ' selected' : ''}" onclick="selectAnswer(${i})">
+      ${a.text}
+    </button>`
+  ).join('');
+
+  const isLast = currentQ === QUESTIONS.length - 1;
+  const hasAnswer = selectedIdx !== undefined;
+
+  showScreen(`
+    ${q.category ? `<p class="pc-category">${q.category}</p>` : ''}
+    <p class="pc-question">${q.text}</p>
+    <div class="pc-answers">
+      ${answersHtml}
+    </div>
+    <div class="pc-nav-btns">
+      ${isFirst
+        ? '<span></span>'
+        : '<button class="pc-btn-back" onclick="prevQuestion()">← Back</button>'
+      }
+      <button class="pc-btn${hasAnswer ? '' : ''}" id="pc-next-btn"
+        onclick="${isLast ? 'goToGate()' : 'nextQuestion()'}"
+        ${hasAnswer ? '' : 'disabled'}>
+        ${isLast ? 'See My Results →' : 'Next →'}
+      </button>
+    </div>
+  `);
+}
+
+function renderGate() {
+  screen = 'gate';
+  showScreen(`
+    <div class="pc-gate">
+      <h2>Your results are ready.</h2>
+      <p>Enter your name and email to see your personalized PM readiness score and recommended next step.</p>
+      <div class="pc-field">
+        <label for="pc-name">First Name</label>
+        <input type="text" id="pc-name" placeholder="Your first name" autocomplete="given-name">
+      </div>
+      <div class="pc-field">
+        <label for="pc-email">Email Address</label>
+        <input type="email" id="pc-email" placeholder="you@example.com" autocomplete="email">
+      </div>
+      <button class="pc-btn primary" id="pc-submit-btn" onclick="submitLead()"
+        style="width:100%;font-size:17px;padding:16px;margin-top:8px;">
+        Show My Results →
+      </button>
+      <p class="pc-privacy">No spam. Your results are sent to your inbox too.</p>
+    </div>
+  `);
+}
+
+function renderResults() {
+  screen = 'results';
+  const r = RESULTS[persona][tier];
+  const bodyLines = r.body.split('\n\n').map(p => `<p class="pc-results-body">${p}</p>`).join('');
+
+  showScreen(`
+    <div class="pc-results-score">
+      <div class="pc-score-circle">
+        <span class="pc-score-number">${score}</span>
+        <span class="pc-score-label">/ 100</span>
+      </div>
+      <div class="pc-score-info">
+        <div class="pc-score-tier">${r.tier_label}</div>
+        <div class="pc-score-headline">${r.headline}</div>
+      </div>
+    </div>
+    ${bodyLines}
+    <p class="pc-results-next">Your next step</p>
+    <p style="font-size:15px;color:rgba(10,31,61,0.6);margin:0 0 20px;line-height:1.6;">${r.next}</p>
+    <a href="${r.cta_url}" class="pc-results-cta" target="_blank" rel="noopener">
+      ${r.cta_text}
+    </a>
+    <hr class="pc-divider">
+    <p class="pc-results-secondary">
+      Want to go deeper? Follow Charles on
+      <a href="https://www.linkedin.com/in/charlesdu/" target="_blank" rel="noopener">LinkedIn</a>
+      for daily PM insights from NASA, Apple, and Ticketmaster.
+    </p>
+  `);
+}
+
+// ── Actions ──────────────────────────────────────────────────────────
+function startQuiz() {
+  if (typeof fbq !== 'undefined') fbq('track', 'ViewContent', { content_name: 'PM Scorecard' });
+  currentQ = 0;
+  renderQuestion();
+}
+
+function selectAnswer(idx) {
+  answers[currentQ] = idx;
+
+  // Store persona from Q1
+  if (currentQ === 0) {
+    persona = QUESTIONS[0].answers[idx].persona;
+  }
+
+  // Store blocker from Q16
+  if (currentQ === 15) {
+    blocker = QUESTIONS[15].answers[idx].text;
+  }
+
+  renderQuestion();
+}
+
+function nextQuestion() {
+  if (answers[currentQ] === undefined) return;
+  currentQ++;
+  renderQuestion();
+}
+
+function prevQuestion() {
+  if (currentQ === 0) return;
+  currentQ--;
+  renderQuestion();
+}
+
+function goToGate() {
+  if (answers[currentQ] === undefined) return;
+  score = calcScore();
+  tier = getTier(score);
+  renderGate();
+}
+
+function submitLead() {
+  const nameEl = document.getElementById('pc-name');
+  const emailEl = document.getElementById('pc-email');
+  const name = nameEl ? nameEl.value.trim() : '';
+  const email = emailEl ? emailEl.value.trim() : '';
+
+  if (!name) { nameEl.focus(); return; }
+  if (!email || !email.includes('@')) { emailEl.focus(); return; }
+
+  const btn = document.getElementById('pc-submit-btn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Loading…'; }
+
+  if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'PM Scorecard' });
+
+  const payload = {
+    first_name: name,
+    email: email,
+    persona: RESULTS[persona].persona_label,
+    score: score,
+    tier: RESULTS[persona][tier].tier_label,
+    biggest_blocker: blocker || '',
+  };
+
+  // Submit to GHL
+  if (GHL_WEBHOOK && GHL_WEBHOOK !== 'YOUR_GHL_WEBHOOK_URL_HERE') {
+    fetch(GHL_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }).catch(() => {}); // fail silently — still show results
+  }
+
+  renderResults();
+}
+
+// ── Boot ─────────────────────────────────────────────────────────────
+renderIntro();
+</script>
+</body>
+</html>
