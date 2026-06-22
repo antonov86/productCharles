@@ -7,6 +7,8 @@
 <title>What Kind of PM Are You Built to Become? — Product Charles</title>
 <meta name="description" content="Take the free PM Readiness Scorecard. 16 questions. Instant personalized results.">
 <link rel="icon" type="image/png" href="../blueprint/assets/favicon.png">
+<script src="../blueprint/assets/webfont.js" type="text/javascript"></script>
+<script type="text/javascript">WebFont.load({ google: { families: ["Lato:400,700,900"] } });</script>
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -25,15 +27,42 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
   html, body { margin: 0; padding: 0; min-height: 100vh; }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
-    background: #F7F5F0;
-    color: #0A1F3D;
+    font-family: Lato, sans-serif;
+    background: #FFFFFF;
+    color: #000000;
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Top nav ── */
+  .pc-nav {
+    background: #000000;
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .pc-nav-logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .pc-nav-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
   }
 
   /* ── Layout ── */
   .pc-wrap {
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,47 +70,24 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     padding: 0 20px 60px;
   }
 
-  .pc-header {
-    width: 100%;
-    max-width: 680px;
-    padding: 24px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .pc-logo {
-    font-size: 15px;
-    font-weight: 700;
-    color: #0A1F3D;
-    text-decoration: none;
-    letter-spacing: -0.01em;
-  }
-
-  .pc-step-label {
-    font-size: 13px;
-    color: rgba(10,31,61,0.45);
-    font-weight: 500;
-  }
-
   /* ── Progress ── */
   .pc-progress-wrap {
     width: 100%;
     max-width: 680px;
-    margin: 20px 0 0;
+    margin: 28px 0 0;
   }
 
   .pc-progress-bar {
     width: 100%;
     height: 4px;
-    background: rgba(10,31,61,0.1);
+    background: rgba(0,0,0,0.1);
     border-radius: 2px;
     overflow: hidden;
   }
 
   .pc-progress-fill {
     height: 100%;
-    background: #FF5A1F;
+    background: #E91E27;
     border-radius: 2px;
     transition: width 0.4s ease;
   }
@@ -94,36 +100,36 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     border-radius: 16px;
     padding: 48px 48px 40px;
     margin-top: 24px;
-    border: 1px solid rgba(10,31,61,0.08);
+    border: 1px solid rgba(0,0,0,0.08);
   }
 
   /* ── Intro screen ── */
   .pc-intro-badge {
     display: inline-block;
-    background: rgba(255,90,31,0.1);
-    color: #FF5A1F;
+    background: rgba(233,30,39,0.08);
+    color: #E91E27;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 5px 12px;
-    border-radius: 20px;
+    padding: 5px 14px;
+    border-radius: 100px;
     margin-bottom: 20px;
   }
 
   .pc-intro h1 {
     font-size: 36px;
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
     margin: 0 0 16px;
-    color: #0A1F3D;
+    color: #000000;
   }
 
   .pc-intro p {
     font-size: 17px;
     line-height: 1.65;
-    color: rgba(10,31,61,0.6);
+    color: rgba(0,0,0,0.58);
     margin: 0 0 32px;
   }
 
@@ -141,13 +147,13 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     align-items: center;
     gap: 7px;
     font-size: 14px;
-    color: rgba(10,31,61,0.55);
+    color: rgba(0,0,0,0.5);
     font-weight: 500;
   }
 
   .pc-meta-list li::before {
     content: "✓";
-    color: #FF5A1F;
+    color: #E91E27;
     font-weight: 700;
   }
 
@@ -155,9 +161,9 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
   .pc-category {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #FF5A1F;
+    color: #E91E27;
     margin: 0 0 12px;
   }
 
@@ -167,7 +173,7 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     line-height: 1.3;
     letter-spacing: -0.02em;
     margin: 0 0 28px;
-    color: #0A1F3D;
+    color: #000000;
   }
 
   .pc-answers {
@@ -178,32 +184,33 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
   }
 
   .pc-answer {
-    padding: 16px 20px;
-    border: 2px solid rgba(10,31,61,0.12);
-    border-radius: 10px;
+    padding: 16px 22px;
+    border: 2px solid rgba(0,0,0,0.1);
+    border-radius: 16px;
     cursor: pointer;
     font-size: 15px;
     line-height: 1.5;
-    color: #0A1F3D;
+    color: #000000;
     transition: border-color 0.15s, background 0.15s;
     text-align: left;
     background: #fff;
     width: 100%;
+    font-family: Lato, sans-serif;
   }
 
   .pc-answer:hover {
-    border-color: rgba(255,90,31,0.4);
-    background: rgba(255,90,31,0.03);
+    border-color: rgba(233,30,39,0.4);
+    background: rgba(233,30,39,0.03);
   }
 
   .pc-answer.selected {
-    border-color: #FF5A1F;
-    background: rgba(255,90,31,0.05);
-    color: #0A1F3D;
-    font-weight: 600;
+    border-color: #E91E27;
+    background: rgba(233,30,39,0.05);
+    color: #000000;
+    font-weight: 700;
   }
 
-  /* ── Navigation ── */
+  /* ── Navigation buttons ── */
   .pc-nav-btns {
     display: flex;
     align-items: center;
@@ -213,7 +220,7 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
   .pc-btn-back {
     font-size: 14px;
     font-weight: 600;
-    color: rgba(10,31,61,0.4);
+    color: rgba(0,0,0,0.35);
     background: none;
     border: none;
     cursor: pointer;
@@ -222,82 +229,80 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     align-items: center;
     gap: 6px;
     transition: color 0.15s;
+    font-family: Lato, sans-serif;
   }
 
-  .pc-btn-back:hover { color: rgba(10,31,61,0.7); }
+  .pc-btn-back:hover { color: rgba(0,0,0,0.65); }
 
   .pc-btn {
     display: inline-block;
-    background: #0A1F3D;
+    background: #000000;
     color: #fff;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 14px 32px;
-    border-radius: 8px;
+    border-radius: 100px;
     border: none;
     cursor: pointer;
-    transition: background 0.15s, transform 0.1s;
+    transition: background 0.15s;
     letter-spacing: -0.01em;
+    font-family: Lato, sans-serif;
   }
 
-  .pc-btn:hover { background: #122d58; transform: translateY(-1px); }
-  .pc-btn:disabled { background: rgba(10,31,61,0.2); cursor: not-allowed; transform: none; }
+  .pc-btn:hover { background: #333333; }
+  .pc-btn:disabled { background: rgba(0,0,0,0.18); cursor: not-allowed; }
 
-  .pc-btn.primary {
-    background: #FF5A1F;
-  }
-  .pc-btn.primary:hover { background: #e04d18; }
-  .pc-btn.primary:disabled { background: rgba(255,90,31,0.3); cursor: not-allowed; }
+  .pc-btn.primary { background: #E91E27; }
+  .pc-btn.primary:hover { background: #C41920; }
+  .pc-btn.primary:disabled { background: rgba(233,30,39,0.3); cursor: not-allowed; }
 
   /* ── Email gate ── */
   .pc-gate h2 {
     font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.25;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
     margin: 0 0 10px;
-    color: #0A1F3D;
+    color: #000000;
   }
 
   .pc-gate p {
     font-size: 16px;
-    color: rgba(10,31,61,0.55);
+    color: rgba(0,0,0,0.55);
     line-height: 1.6;
     margin: 0 0 28px;
   }
 
-  .pc-field {
-    margin-bottom: 16px;
-  }
+  .pc-field { margin-bottom: 16px; }
 
   .pc-field label {
     display: block;
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(10,31,61,0.6);
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.45);
     margin-bottom: 6px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   .pc-field input {
     width: 100%;
-    padding: 14px 16px;
-    border: 2px solid rgba(10,31,61,0.12);
-    border-radius: 8px;
+    padding: 14px 18px;
+    border: 2px solid rgba(0,0,0,0.1);
+    border-radius: 16px;
     font-size: 16px;
-    color: #0A1F3D;
+    color: #000000;
     background: #fff;
     outline: none;
     transition: border-color 0.15s;
-    font-family: inherit;
+    font-family: Lato, sans-serif;
   }
 
-  .pc-field input:focus { border-color: #FF5A1F; }
+  .pc-field input:focus { border-color: #E91E27; }
 
   .pc-privacy {
     font-size: 12px;
-    color: rgba(10,31,61,0.35);
+    color: rgba(0,0,0,0.3);
     margin: 12px 0 0;
   }
 
@@ -306,9 +311,9 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     display: flex;
     align-items: center;
     gap: 24px;
-    padding: 24px;
-    background: #0A1F3D;
-    border-radius: 12px;
+    padding: 28px;
+    background: #000000;
+    border-radius: 16px;
     margin-bottom: 32px;
   }
 
@@ -316,8 +321,8 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.1);
-    border: 3px solid #FF5A1F;
+    background: rgba(255,255,255,0.08);
+    border: 3px solid #E91E27;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -327,29 +332,27 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
 
   .pc-score-number {
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 900;
     color: #fff;
     line-height: 1;
   }
 
   .pc-score-label {
     font-size: 10px;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.4);
     letter-spacing: 0.5px;
     margin-top: 2px;
   }
 
-  .pc-score-info {
-    flex: 1;
-  }
+  .pc-score-info { flex: 1; }
 
   .pc-score-tier {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #FF5A1F;
-    margin-bottom: 4px;
+    color: #E91E27;
+    margin-bottom: 6px;
   }
 
   .pc-score-headline {
@@ -357,56 +360,57 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     font-weight: 700;
     color: #fff;
     line-height: 1.25;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .pc-results-body {
     font-size: 16px;
     line-height: 1.7;
-    color: rgba(10,31,61,0.72);
+    color: rgba(0,0,0,0.65);
     margin: 0 0 28px;
   }
 
   .pc-results-next {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(10,31,61,0.4);
+    color: rgba(0,0,0,0.35);
     margin: 0 0 12px;
   }
 
   .pc-results-cta {
     display: inline-block;
-    background: #FF5A1F;
+    background: #E91E27;
     color: #fff;
     font-size: 17px;
-    font-weight: 600;
-    padding: 16px 36px;
-    border-radius: 8px;
+    font-weight: 700;
+    padding: 16px 40px;
+    border-radius: 100px;
     text-decoration: none;
-    transition: background 0.15s, transform 0.1s;
+    transition: background 0.15s;
     letter-spacing: -0.01em;
+    font-family: Lato, sans-serif;
   }
 
-  .pc-results-cta:hover { background: #e04d18; transform: translateY(-1px); }
+  .pc-results-cta:hover { background: #C41920; }
 
   .pc-divider {
     border: none;
-    border-top: 1px solid rgba(10,31,61,0.08);
+    border-top: 1px solid rgba(0,0,0,0.08);
     margin: 32px 0;
   }
 
   .pc-results-secondary {
     font-size: 14px;
-    color: rgba(10,31,61,0.5);
+    color: rgba(0,0,0,0.45);
     line-height: 1.6;
   }
 
   .pc-results-secondary a {
-    color: #FF5A1F;
+    color: #E91E27;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   /* ── Screen transitions ── */
@@ -428,11 +432,12 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
     text-align: center;
     margin-top: 32px;
     font-size: 13px;
-    color: rgba(10,31,61,0.3);
+    color: rgba(0,0,0,0.3);
   }
 
   /* ── Mobile ── */
   @media (max-width: 600px) {
+    .pc-nav { padding: 0 20px; }
     .pc-card { padding: 32px 24px 28px; }
     .pc-intro h1 { font-size: 26px; }
     .pc-question { font-size: 19px; }
@@ -443,6 +448,11 @@ src="https://www.facebook.com/tr?id=1336332018551257&ev=PageView&noscript=1"/></
 </style>
 </head>
 <body>
+
+<nav class="pc-nav">
+  <a class="pc-nav-logo" href="https://productcharles.com">Product Charles</a>
+  <span class="pc-nav-label" id="nav-step-label"></span>
+</nav>
 
 <div class="pc-wrap" id="app">
   <!-- Rendered by JS -->
@@ -780,17 +790,15 @@ function showScreen(html) {
   const app = getApp();
   app.innerHTML = '';
 
-  // Header (always visible except intro)
+  // Update sticky nav step label
   const totalScored = QUESTIONS.length; // 16
   const showProgress = screen === 'quiz';
-
-  const header = el('div', { class: 'pc-header' },
-    el('a', { href: 'https://productcharles.com', class: 'pc-logo' }, 'Product Charles'),
-    showProgress
-      ? el('span', { class: 'pc-step-label' }, `Question ${currentQ + 1} of ${QUESTIONS.length}`)
-      : el('span', { class: 'pc-step-label' }, 'PM Readiness Scorecard')
-  );
-  app.appendChild(header);
+  const navLabel = document.getElementById('nav-step-label');
+  if (navLabel) {
+    navLabel.textContent = showProgress
+      ? `Question ${currentQ + 1} of ${QUESTIONS.length}`
+      : 'PM Readiness Scorecard';
+  }
 
   if (showProgress) {
     const pct = Math.round((currentQ) / QUESTIONS.length * 100);
