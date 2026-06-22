@@ -865,7 +865,7 @@ function renderQuestion() {
     </div>
     <div class="pc-nav-btns">
       ${isFirst
-        ? '<span></span>'
+        ? '<button class="pc-btn-back" onclick="goToIntro()">← Back</button>'
         : '<button class="pc-btn-back" onclick="prevQuestion()">← Back</button>'
       }
       <button class="pc-btn${hasAnswer ? '' : ''}" id="pc-next-btn"
@@ -936,6 +936,11 @@ function startQuiz() {
   if (typeof fbq !== 'undefined') fbq('track', 'ViewContent', { content_name: 'PM Scorecard' });
   currentQ = 0;
   renderQuestion();
+}
+
+function goToIntro() {
+  screen = 'intro';
+  renderIntro();
 }
 
 function selectAnswer(idx) {
